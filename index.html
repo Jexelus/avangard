@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Literata:opsz@7..72&family=Roboto&display=swap"
         rel="stylesheet">
+        
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Авангард</title>
 </head>
 
@@ -111,36 +113,36 @@
                         <div class="text-h6-bold actions-1-text">Виды и размеры календарей</div>
                         <div class="actions-1-choises">
                             <div class="actions-1-choise">
-                                <input type="radio" id="control_01" name="select-1" value="1" checked>
+                                <input type="radio" id="control_01" name="select-1" value="1" checked onchange="GetResult()">
                                 <label for="control_01">
                                     <div class="text-h6 actions-1-choise_text">Квартальный календарь Бизнес МИНИ</div>
                                 </label>
                             </div>
                             <div class="actions-1-choise">
-                                <input type="radio" id="control_02" name="select-1" value="2">
+                                <input type="radio" id="control_02" name="select-1" value="2" onchange="GetResult()">
                                 <label for="control_02">
                                     <div class="text-h6 actions-1-choise_text">Квартальный календарь 3 в 1</div>
                                 </label>
                             </div>
                         </div>
                     </div>
-                    <div class="actions-2">
+                    <div class="actions-2" id="actions_2">
                         <div class="text-h6-bold actions-2-text">Формат</div>
                         <div class="actions-2-choises">
                             <div class="actions-2-choise">
-                                <input type="radio" id="control_03" name="select-2" value="1" checked>
+                                <input type="radio" id="control_03" name="select-2" value="1" checked onchange="GetResult()">
                                 <label for="control_03">
                                     <div class="text-h6 actions-2-choise_text">Без рекламных полей</div>
                                 </label>
                             </div>
                             <div class="actions-2-choise">
-                                <input type="radio" id="control_04" name="select-2" value="2">
+                                <input type="radio" id="control_04" name="select-2" value="2" onchange="GetResult()">
                                 <label for="control_04">
                                     <div class="text-h6 actions-2-choise_text">1 рекламное поле</div>
                                 </label>
                             </div>
                             <div class="actions-2-choise">
-                                <input type="radio" id="control_05" name="select-2" value="3">
+                                <input type="radio" id="control_05" name="select-2" value="3" onchange="GetResult()">
                                 <label for="control_05">
                                     <div class="text-h6 actions-2-choise_text">3 рекламных поля</div>
                                 </label>
@@ -155,25 +157,25 @@
                         </div>
                         <div class="actions-3-choises">
                             <div class="actions-3-choise">
-                                <input type="radio" id="control_06" name="select-3" value="1" checked>
+                                <input type="radio" id="control_06" name="select-3" value="1" checked onchange="GetResult()">
                                 <label for="control_06">
                                     <div class="text-h6 actions-3-choise_text">50</div>
                                 </label>
                             </div>
                             <div class="actions-3-choise">
-                                <input type="radio" id="control_07" name="select-3" value="2">
+                                <input type="radio" id="control_07" name="select-3" value="2" onchange="GetResult()">
                                 <label for="control_07">
                                     <div class="text-h6 actions-3-choise_text">100</div>
                                 </label>
                             </div>
                             <div class="actions-3-choise">
-                                <input type="radio" id="control_08" name="select-3" value="3">
+                                <input type="radio" id="control_08" name="select-3" value="3" onchange="GetResult()">
                                 <label for="control_08">
                                     <div class="text-h6 actions-3-choise_text">300</div>
                                 </label>
                             </div>
                             <div class="actions-3-choise">
-                                <input type="radio" id="control_09" name="select-3" value="4">
+                                <input type="radio" id="control_09" name="select-3" value="4" onchange="GetResult()">
                                 <label for="control_09">
                                     <div class="text-h6 actions-3-choise_text">500</div>
                                 </label>
@@ -184,7 +186,7 @@
                         <div class="cost-field">
                             <div class="text-h5 order_cost-name">Стоимость заказа:</div>
                             <!-- ??????? -->
-                            <div class="text-h4">ot 20 000k</div>
+                            <div class="text-h4"><p id="price">от 13400р</p></div>
                         </div>
                         <div class="order-button">
                             <div id="button-design">
@@ -202,9 +204,8 @@
             </div>
         </div>
     </section>
-
     <script src="script.js"></script>
-
+    <script src="calc.js"></script>
 </body>
-
+    
 </html>
