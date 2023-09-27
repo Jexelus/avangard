@@ -9,9 +9,14 @@ function GetResult(){
     var t300 = document.getElementById("control_08");
     var t500 = document.getElementById("control_09");
     var ac2 = document.getElementById("actions_2");
-    var price = document.getElementById("price")
+    var price = document.getElementById("price");
+    var ac2_1 = document.getElementById("actions_2_c1");
+    var ac2_2 = document.getElementById("actions_2_c2");
+    var ac2_3 = document.getElementById("actions_2_c3");
 
     if (c1.checked){
+        ac2_1.setAttribute('style', 'display:block;');
+        ac2_3.setAttribute('style', 'display:block;');
         ac2.setAttribute('style', 'display:flex;');
         if (f0.checked){
             if (t50.checked){
@@ -57,7 +62,9 @@ function GetResult(){
         }
     }
     if (c2.checked) {
-        ac2.setAttribute('style', 'display:none;');
+        ac2_1.setAttribute('style', 'display:none;');
+        ac2_3.setAttribute('style', 'display:none;');
+        f1.checked = true;
         if (t50.checked){
             price.innerText = "от 7200р"
         }
